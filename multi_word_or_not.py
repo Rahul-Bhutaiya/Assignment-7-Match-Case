@@ -5,8 +5,8 @@ word string using match case statement
 
 string_var=input('Enter a String : ')
 
-match 'multiword' if ' ' in string_var else 'singleword':
-    case 'multiword':
+match string_var:
+    case string_var if ' ' in string_var.strip(): #YOU CAN USE IF STATEMENT WITH CASE ALSO
         print('It\'s Multi-Word String')
-    case 'singleword':
+    case string_var if ' ' not in string_var.strip():
         print('It\'s Single-Word String.')
